@@ -1,0 +1,8 @@
+/vendor
+/log
+.env
+.idea
+composer.lock
+/public/client/node_modules
+/public/client/npm_debug.log
+/public/client/.sass-cache

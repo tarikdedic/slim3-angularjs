@@ -1,0 +1,23 @@
+{
+  "name": "slim3-angularjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "author": "Tarik Dedic",
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "^1.5.7",
+    "angular-ui-router": "^0.3.1",
+    "bootstrap": "^3.3.6",
+    "bootstrap-sass": "^3.3.6",
+    "grunt": "^1.0.1",
+    "grunt-angular-templates": "^1.0.4",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ng-annotate": "^2.0.2",
+    "jquery": "^3.1.0"
+  }
+}

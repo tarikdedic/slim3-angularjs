@@ -1,0 +1,202 @@
+// -----------------------------------------------------------------------------
+// Mixins
+// -----------------------------------------------------------------------------
+
+//
+// Clearfix
+//
+
+@mixin clearfix() {
+  & {
+    *zoom: 1;
+  }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+//
+// Box Model
+//
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+  -moz-box-sizing: $box-model; // Firefox <= 19
+  box-sizing: $box-model;
+}
+
+//
+// Radius
+//
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+//
+// Shadow
+//
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+//
+// Transition
+//
+
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+//
+// Opacity
+//
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+//
+// Center-align a block level element
+//
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//
+// Absolute positioned
+//
+
+@mixin abs-pos($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+}
+
+//
+// Placeholder
+//
+
+@mixin placeholder($color) {
+  &.placeholder {
+    color: $color
+  }
+  &:-moz-placeholder {
+    color: $color
+  }
+  &::-webkit-input-placeholder {
+    color: $color
+  }
+  &:-ms-input-placeholder {
+    color: $color
+  }
+}
+
+//
+// Grid
+//
+
+@mixin calc-grid-column($index, $class, $type) {
+  @if ($type == width) and ($index > 0) {
+    .col-#{$class}-#{$index} {
+      width: percentage(($index / $grid-columns));
+    }
+  }
+  @if ($type == push) and ($index > 0) {
+    .col-#{$class}-push-#{$index} {
+      left: percentage(($index / $grid-columns));
+    }
+  }
+  @if ($type == push) and ($index == 0) {
+    .col-#{$class}-push-0 {
+      left: auto;
+    }
+  }
+  @if ($type == pull) and ($index > 0) {
+    .col-#{$class}-pull-#{$index} {
+      right: percentage(($index / $grid-columns));
+    }
+  }
+  @if ($type == pull) and ($index == 0) {
+    .col-#{$class}-pull-0 {
+      right: auto;
+    }
+  }
+  @if ($type == offset) {
+    .col-#{$class}-offset-#{$index} {
+      margin-left: percentage(($index / $grid-columns));
+    }
+  }
+}
+
+@mixin loop-grid-columns($columns, $class, $type) {
+  @for $i from 0 through $columns {
+    @include calc-grid-column($i, $class, $type);
+  }
+}
+
+@mixin grid($class) {
+  @include loop-grid-columns($grid-columns, $class, width);
+  @include loop-grid-columns($grid-columns, $class, pull);
+  @include loop-grid-columns($grid-columns, $class, push);
+  @include loop-grid-columns($grid-columns, $class, offset);
+}
+
+//
+// Responsive visibility control
+//
+
+@mixin responsive-visibility($class) {
+  .hide-#{$class} {
+    display: none !important;
+  }
+  .show-#{$class} {
+    display: block !important;
+  }
+}
+
+//
+// Buttons
+//
+
+@mixin btn($color, $bg, $border) {
+  color: $color;
+  background-color: $bg;
+  border-color: $border;
+  &:hover,
+  &:focus {
+    color: $color;
+    background-color: darken($bg, 5%);
+    border-color: darken($border, 5%);
+    text-decoration: none;
+  }
+}
+
+//
+// Alerts
+//
+
+@mixin alert($color, $bg, $border) {
+  color: $color;
+  background-color: $bg;
+  border-color: $border;
+}

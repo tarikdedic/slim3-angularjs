@@ -1,0 +1,39 @@
+  {
+      "app": [
+          "app/blocks/auth/auth.module.js",
+          "app/blocks/auth/auth.helper.js",
+          "app/blocks/router/router.module.js",
+          "app/blocks/router/router.helper.js",
+          "app/core/app.core.js",
+          "app/core/constants.js",
+          "app/data/data.module.js",
+          "app/data/login.repository.js",
+          "app/data/match.repository.js",
+          "app/layout/layout.module.js",
+          "app/layout/navbar.controller.js",
+          "app/dashboard/dashboard.module.js",
+          "app/dashboard/dashboard.controller.js",
+          "app/dashboard/dashboard.route.js",
+          "app/login/login.module.js",
+          "app/login/login.controller.js",
+          "app/login/login.route.js",
+          "app/match/match.module.js",
+          "app/match/match.controller.js",
+          "app/match/match.route.js",
+          "app/app.module.js",
+          "app/app.start.js"
+      ],
+      "templates": [
+          "app/layout/*.html",
+          "app/dashboard/templates/*.html",
+          "app/login/templates/*.html",
+          "app/match/templates/*.html"
+      ],
+      "vendor": [
+          "node_modules/jquery/dist/jquery.js",
+          "node_modules/angular/angular.js",
+          "node_modules/angular-ui-router/release/angular-ui-router.js",
+          "node_modules/bootstrap/js/collapse.js",
+          "node_modules/bootstrap/js/transition.js"
+      ]
+  }

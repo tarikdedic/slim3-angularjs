@@ -1,0 +1,14 @@
+<section class="section section-auth">
+    <div class="alert alert-danger" role="alert" data-ng-show="vm.showAlert" data-ng-bind="vm.errMessage"></div>
+
+    <form id="LoginForm" name="LoginForm" data-ng-submit="LoginForm.$valid && vm.login()">
+        <h3>Please log in</h3>
+        <div class="form-group">
+            <input type="email" id="email" class="form-control" placeholder="Email address" data-ng-model="vm.formData.email" required autofocus>
+        </div>
+        <div class="form-group">
+            <input type="password" id="password" class="form-control" placeholder="Password" data-ng-model="vm.formData.password" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Log In</button>
+    </form>
+</section>

@@ -1,0 +1,32 @@
+{
+    "name": "slim3-angularjs",
+    "description": "Slim 3 & AngularJS application",
+    "type": "project",
+    "keywords": [
+        "slim3-angularjs",
+        "Slim",
+        "Slim 3",
+        "AngularJS",
+        "JWT auth",
+        "slim-jwt-auth"
+    ],
+    "license": "MIT",
+    "authors": [{
+        "name": "Tarik Dedić",
+        "email": "dedictarik[@]gmail.com"
+    }],
+
+    "require": {
+        "slim/slim": "^3.0",
+        "illuminate/database": "^5.2",
+        "monolog/monolog": "^1.20",
+        "tuupola/slim-jwt-auth": "^2.3",
+        "vlucas/phpdotenv": "^2.3",
+        "tuupola/base62": "^0.6.0",
+        "robmorgan/phinx": "^0.6.3"
+    },
+
+    "autoload": {
+        "psr-4": { "App\\": "app/src" }
+    }
+}

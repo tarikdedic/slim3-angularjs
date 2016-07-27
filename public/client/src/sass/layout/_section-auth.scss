@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// Section authentication
+// -----------------------------------------------------------------------------
+
+.section-auth {
+    max-width: $section-auth-max-width;
+    padding: $section-auth-padding;
+    margin: $section-auth-margin;
+
+    .form-group {
+    	margin-bottom: $section-auth-form-group-mb;
+    }
+}
