@@ -1,7 +1,6 @@
 # slim3-angularjs
 
-Slim3, migrations, JWT authentication, eloquent ORM and Monolog.
-&
+Slim3, migrations, JWT authentication, eloquent ORM and Monolog.<br/>
 AngularJS, Twitter Bootstrap (Sass) and Grunt.
 
 ### Local configuration
