@@ -1,7 +1,8 @@
 # slim3-angularjs
 
-slim3-angularjs is a simple skeleton project that includes migrations, JWT authentication, eloquent ORM, Monolog.
-Client side includes AngularJS, Twitter Bootstrap (Sass) and Grunt as a task runner.
+Slim3, migrations, JWT authentication, eloquent ORM and Monolog.
+&
+AngularJS, Twitter Bootstrap (Sass) and Grunt.
 
 ### Local configuration
 
